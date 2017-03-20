@@ -1,0 +1,10 @@
+{% if latest_bikes_list %}
+    <ul>
+    {% for bike in latest_bikes_list %}
+        <li><a href="/tienda/{{ bike.id }}/">{{ bike.brand }}  {{bike.model}}</a></li>
+        <img src= "/tienda/{{bike.image}}"></img>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No bikes are available.</p>
+{% endif %}
